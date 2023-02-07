@@ -16,6 +16,7 @@ public:
     void fromOpenCV(const cv::Mat& mat) override;
     cv::Mat toOpenCV() const override;
     bool readImage(const std::string& path) override;
+    void draw(Shape &shape) override;
 
     BWMatrix toBW() const;
 

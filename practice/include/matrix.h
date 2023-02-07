@@ -7,6 +7,7 @@
 #include <opencv2/core.hpp>
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/highgui.hpp>
+#include <shape.h>
 
 class Matrix {
 public:
@@ -30,6 +31,7 @@ public:
     virtual cv::Mat toOpenCV() const = 0;
     virtual bool readImage(const std::string& path) = 0;
     void display() const;
+    virtual void draw(Shape& shape) = 0;
 
     Matrix& operator=(const Matrix& mat);
 
